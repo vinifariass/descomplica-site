@@ -6,13 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Containers</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
 
+    <style>
+        .checkmark {
+            color: green;
+            font-size: 50px;
+            line-height: 50px;
+            animation: checkmark-animation 1s ease-in-out forwards;
+        }
+
+        @keyframes checkmark-animation {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Tarefa 2</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,37 +60,57 @@
     <main>
         <!DOCTYPE html>
         <html lang="en">
+
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Formulário de Contato</title>
-            <!-- Adicionando o CSS do Bootstrap -->
             <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
         </head>
+
         <body>
             <div class="container mt-5">
                 <h2>Formulário de Contato</h2>
                 <form>
                     <div class="form-group">
                         <label for="name">Nome:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Digite seu nome" name="name" required>
+                        <input type="text" class="form-control" id="name" placeholder="Digite seu nome" name="name"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" name="email" required>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" name="email"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="message">Mensagem:</label>
-                        <textarea class="form-control" id="message" rows="3" placeholder="Digite sua mensagem" name="message" required></textarea>
+                        <textarea class="form-control" id="message" rows="3" placeholder="Digite sua mensagem"
+                            name="message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
             </div>
-            <!-- Adicionando o JavaScript do Bootstrap -->
+            <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body text-center">
+                      <!-- Ícone de verificação com animação -->
+                      <div class="checkmark">
+                        <i class="fas fa-check"></i>
+                      </div>
+                      <p>Sua mensagem foi enviada com sucesso!</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-success" onclick="window.location.href='index.html'">OK</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         </body>
+
         </html>
     </main>
 
@@ -74,12 +118,26 @@
         <div class="container text-center py-3">
             <p>&copy; 19/01/2024 ?> Vinicius Farias Silva. Todos os direitos reservados.</p>
         </div>
-        
+
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('form').on('submit', function (e) {
+                e.preventDefault();
+
+                $('#successModal').modal('show');
+
+                setTimeout(function () {
+                    $('#successModal').modal('hide');
+                    window.location.href = 'index.html';
+                }, 3000);
+            });
+        });
+    </script>
 </body>
 
 </html>
