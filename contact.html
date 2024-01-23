@@ -69,7 +69,7 @@
         </head>
 
         <body>
-            <div class="container mt-5">
+            <div class="container mt-5  mb-4">
                 <h2>Formulário de Contato</h2>
                 <form>
                     <div class="form-group">
@@ -90,36 +90,74 @@
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
             </div>
-            <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-body text-center">
-                      <!-- Ícone de verificação com animação -->
-                      <div class="checkmark">
-                        <i class="fas fa-check"></i>
-                      </div>
-                      <p>Sua mensagem foi enviada com sucesso!</p>
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <!-- Ícone de verificação com animação -->
+                            <div class="checkmark">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p>Sua mensagem foi enviada com sucesso!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success"
+                                onclick="window.location.href='index.html'">OK</button>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-success" onclick="window.location.href='index.html'">OK</button>
-                    </div>
-                  </div>
                 </div>
-              </div>
+            </div>
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        </body>
 
         </html>
     </main>
+    <footer class="bg-dark text-light pt-4 pb-2">
+        <div class="container">
+            <div class="row">
+                <!-- Section: Social media -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Siga-nos nas redes sociais</h5>
 
-    <footer>
-        <div class="container text-center py-3">
-            <p>&copy; 19/01/2024 ?> Vinicius Farias Silva. Todos os direitos reservados.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="mr-3">
+                            <a href="#!" class="text-white">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="mr-3">
+                            <a href="#!" class="text-white">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="mr-3">
+                            <a href="#!" class="text-white">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <!-- Add more social icons as needed -->
+                    </ul>
+                </div>
+
+                <!-- Section: Contact information -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contato</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123, Buenos Aires</p>
+                        </li>
+                        <li>
+                            <p><i class="fas fa-phone"></i> Telefone: +54 11 1234-5678</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
     </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -138,6 +176,7 @@
             });
         });
     </script>
+
 </body>
 
 </html>
